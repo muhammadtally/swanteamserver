@@ -5,12 +5,8 @@
   * [About](#about)
   * [Upload](#Upload)
   * [Search](#Search)
-        * [Download](#Download)
-        * [OCR](#OCR)
-        * [NLP](#NLP)
-        * [Doc2Victor](#Document-To-Victor)
-   * [AddUser](#Add-User)
-   * [AddGroup](#Add-Group)
+  * [AddUser](#Add-User)
+  * [AddGroup](#Add-Group)
 
 ## About
 This project is the server side of the project [SwanTeam](https://github.com/muhammadtally/swanteam). And the API Gateways were built using the [FastAPI](https://fastapi.tiangolo.com/) web framework.
@@ -29,3 +25,5 @@ This system is divided into 4 processes:
 2) Performing OCR for files, when this process turns our PDF or image files into text files
 3) NLP for each text file received from the files we downloaded.
 4) Comparing vectors between the document vectors and the query vector.
+
+### Download Files
