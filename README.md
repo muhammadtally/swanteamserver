@@ -4,7 +4,7 @@
 * [SwanTeamServer](#Server-For-Swan-Team-WebApp)
   * [About](#about)
   * [Upload](#Upload)
-  * [Search](#support)
+  * [Search](#Search)
         * [Download](#Download)
         * [OCR](#OCR)
         * [NLP](#NLP)
@@ -19,6 +19,13 @@ This project contains functions for uploading files to **AWS S3 Bucket**, downlo
 
 ## Upload
 
-We used AWS S3 BUCKET to save the files, and in order to do this, we built an **API gateway** for uploading, which receives the user type from the application (the files are saved in a folder named according to the user type, so the user type is actually the name of the company the user belongs to), and receives the file about bytes, then a Session is opened that addresses the S3 bucket and the name of the folder where the file should be saved.
+We used AWS S3 BUCKET to save the files, and in order to do this, we built an **API gateway** for uploading, which receives the user type from the application (the files are saved in a folder named according to the user Group, so the user Group is actually the name of the company the user belongs to), and receives the file about bytes, then a Session is opened that addresses the S3 bucket and the name of the folder where the file should be saved.
 
 ## Search
+File search is essentially an information retrieval system, where the search is based on the **DOC2VIC** model, that is, turning the documents from **PDF or image** documents into numeric vectors.
+This system is divided into 4 processes:
+
+1) Downloading the files from the S3 bucket
+2) Performing OCR for files, when this process turns our PDF or image files into text files
+3) NLP for each text file received from the files we downloaded.
+4) Comparing vectors between the document vectors and the query vector.
