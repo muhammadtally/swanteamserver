@@ -29,13 +29,13 @@ The files are downloaded while opening a session according to the type of user t
 
 ### OCR
 After downloading the files relevant to this user, each file goes through an **OCR process**, so that this process turns the files (which in our case are image files or PDF files), into **TXT files**.
-This operation is implemented by the system using the **pytesseract** library which is based on [tesseract]https://github.com/tesseract-ocr/tesseract.
+This operation is implemented by the system using the **pytesseract** library which is based on [tesseract](https://github.com/tesseract-ocr/tesseract).
 
 ### Natural language processing (NLP)
 After we transferred the files to TXT files, we activate the NLP functions, which is actually a process of analyzing the received text in order to turn the files into vectors.
 The NLP operations were compiled using manually built auxiliary libraries and functions (NLP folder), the auxiliary libraries:
-1) [YAP-Wrapper]https://github.com/amit-shkolnik/YAP-Wrapper/blob/c214ede3839327c08b7dfd17a3c28587348fa53d/yap_api.py#L44
-2) [Hebrew-Tokenizer]https://github.com/YontiLevin/Hebrew-Tokenizer
+1) [YAP-Wrapper](https://github.com/amit-shkolnik/YAP-Wrapper/blob/c214ede3839327c08b7dfd17a3c28587348fa53d/yap_api.py#L44)
+2) [Hebrew-Tokenizer](https://github.com/YontiLevin/Hebrew-Tokenizer)
 
 ### Represent each file as a vector
 After we have performed all the operations, we will now transfer each file to vector form according to the NLP operations performed, and then we will perform a vector comparison between the query vector and the vector of each and every document.
