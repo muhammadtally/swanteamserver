@@ -27,3 +27,9 @@ This system is divided into 4 processes:
 4) Comparing vectors between the document vectors and the query vector.
 
 ### Download Files
+The files are downloaded while opening a session according to the type of user to the folder belonging to this type of user, then the system downloads all the relevant files of this user from the S3 bucket
+
+### OCR
+After downloading the files relevant to this user, each file goes through an **OCR process**, so that this process turns the files (which in our case are image files or PDF files), into **TXT files**.
+This operation is implemented by the system using the **pytesseract** library which is based on [tesseract]https://github.com/tesseract-ocr/tesseract.
+
